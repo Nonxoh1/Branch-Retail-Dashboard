@@ -23,8 +23,9 @@ It breaks down deposits into CASA (Current & Savings Accounts) and Service Depos
 <h2>Steps Followed:</h2>
 
 <p align="center">
-Step 1: Data Extraction
-<img src="https://i.imgur.com/C0l5M4M.jpeg" height="80%" width="80%" alt="Deposit Mobilized"/>
+Step 1:Data Extraction via SQL (Oracle Database)
+I wrote and executed a custom SQL script (see /query/deposit_mobilize.sql) to extract credit-only deposit transactions.
+
 
 <p align="left">SQL queries were used to extract transaction records from core banking systems.
 <br>Important fields included: USER_ID, ACCOUNT_NAME, TRN_DESC, AMOUNT, ZONE, BRANCH_NAME, CUSTOMER_NAME.</br>
