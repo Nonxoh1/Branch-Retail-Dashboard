@@ -120,6 +120,15 @@ Returns Total Deposit Only If Rank Is in Range
 If a CSO falls within the selected rank range (e.g., Top 5), then their total deposit is shown.
 If not, they’re hidden from the visual.
 
+✅ Final Thoughts
+This dashboard wasn’t just built to look good — it was created to solve a real problem. It gives the Dawson branch team a clear way to see how much deposit each CSO is bringing in, who’s performing well, and where there’s room for improvement.
+
+By combining SQL, Power BI, and a bit of DAX logic, I was able to turn raw transaction data into something managers can actually use — whether it’s for performance reviews, strategy planning, or just keeping track of progress toward monthly targets.
+
+This project is a good example of how data can help teams work smarter, not harder.
+
+
+
 <br />
 <br />
 
