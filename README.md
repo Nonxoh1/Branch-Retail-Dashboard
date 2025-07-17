@@ -69,11 +69,17 @@ Total Deposits Mobilized
 Top Performing Zones
 Performance by State and Area
 Branch Contribution Breakdown
-Used bar charts, cards, a ranking system of top and bottom performing CSO's and slicers for interactivity and insight filtering.
+Used bar charts, cards, a ranking system of top and bottom performing CSO's and slicers for interactivity and insight filtering as shown below
+
+<p align="center">
+ 
+<img src="https://i.imgur.com/oCLsEVG.jpeg" height="80%" width="80%" alt="Channels dashboard">
 
 
-
-
+<p align="center">
+Step 4: Dashboard Development
+<p align="left"><br>Designed a clean and executive-friendly layout to highlight:
+Total Deposits Mobilized
  
 
 <br />
