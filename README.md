@@ -88,42 +88,37 @@ Total Deposits Mobilized
 </br>
 </br>
 <p align="center">
-Step 3: Visual Design <br/>
-<img src="https://i.imgur.com/CAhtiTQ.jpeg" height="80%" width="80%" alt="Dashbaord Design"/>
+Step 5: How I Ranked CSO Performance<br/>
+<img src="https://i.imgur.com/nGltAkv.jpeg" height="80%" width="80%" alt="Dashbaord Design"/>
  
- <p align="left">A Decomposition Tree Visual was used to break down transaction flow in this order:
-  
-  <br>Platform ➝ Account Product ➝ Transaction Type ➝ Zone ➝ Branch ➝ Customer Name
+ <p align="left">To make the dashboard more interactive and flexible, I built a dynamic DAX formula that lets users rank CSOs either by Top Performers or Bottom Performers, depending on what they choose from a slicer.
 
-Verified column data types and filtered out non-essential transactions (REV%, SDC, VAT, etc.).
+This means you can switch between:
 
-📈 Insights
-Total Transaction Volume: ₦1,073,043,066.09
+Seeing the highest-performing CSOs (based on total deposits), or
 
-Top Channels by Volume:
+Seeing the lowest-performing CSOs, if you're trying to identify underperformance
 
-FLEXSWITCH: ₦948M+
+Here's a breakdown of what the DAX formula does:
 
-LAPOIBANKMOB: ₦113M+
+Ranks All CSOs
+First, I used the RANKX function to assign a rank to each CSO based on how much deposit they brought in:
 
-NIPINCM: ₦6.6M
+One rank is for top-down (highest to lowest)
 
-Most Used Products:
+Another is for bottom-up (lowest to highest)
 
-Savings Account - Staff
+Takes User Input from a Slicer
+I created a slicer called "Choose Rank Type" with options like "Top" and "Bottom".
 
-Regular Savings
+Whatever the user selects tells the DAX function which rank to apply — so the logic reacts dynamically.
 
-Xpress Savings
+Shows Only the Selected Number of CSOs
+Another slicer called "Choose Rank Value" allows the user to select how many CSOs they want to see (e.g., Top 5, Bottom 10, etc.).
 
-Top Zones by Activity:
-
-Lagos Mainland Zone
-
-FCT Zone
-
-Lagos West Zone
-
+Returns Total Deposit Only If Rank Is in Range
+If a CSO falls within the selected rank range (e.g., Top 5), then their total deposit is shown.
+If not, they’re hidden from the visual.
 
 <br />
 <br />
