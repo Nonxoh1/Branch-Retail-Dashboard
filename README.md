@@ -60,7 +60,7 @@ Step 4: Data Modeling in Power BI
 <p align="left"><br>Imported the cleaned EXCEL File into Power BI.
 Defined proper data types (e.g., branch as text, amount as decimal).
 
-Created relationships between dimension tables with other tables because i made use of two data. Example is New clients mobilized by each CSO in the bank.(see https://github.com/Nonxoh1/Branch-Retail-Dashboard/blob/main/DEPOSIT%20MOBILIZE.sql)</br>
+Created relationships between dimension tables with other tables because i made use of two data. Example is New clients mobilized by each CSO in the bank.(see https://github.com/Nonxoh1/Branch-Retail-Dashboard/blob/main/NEW%20CUSTOMERS%20CREATED_ONBOARDED.sql)</br>
 
 
 
