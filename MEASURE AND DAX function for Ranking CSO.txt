@@ -1,0 +1,33 @@
+--DAX FUNCTION ON HOW I RANKED MTY CSO--
+
+CSO Rank = 
+  VAR _Top = 
+  RANKX(
+    ALL('DEPOSIT MOB'[CSO]), 
+    [TOTAL DEPOSIT], 
+    , 
+    DESC,Skip
+)
+ VAR _Botttom = 
+  RANKX(
+    ALL('DEPOSIT MOB'[CSO]), 
+    [TOTAL DEPOSIT], 
+    , 
+    ASC, 
+   Skip
+)
+Var _SelectRankType = SELECTEDVALUE('Choose Rank Type'[Select])
+VAR _RankingType =
+    IF(_SelectRankType = "Top",
+    _Top,
+    _Botttom
+    )
+
+RETURN 
+IF(_RankingType<='Choose Rank'[Choose Rank Value],[TOTAL DEPOSIT])
+
+
+
+--MEASURE--
+
+TOTAL DEPOSIT = SUM('DEPOSIT MOB'[TOTAL_DEPOSIT])
