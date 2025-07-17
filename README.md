@@ -102,11 +102,11 @@ Seeing the lowest-performing CSOs, if you're trying to identify underperformance
 Here's a breakdown of what the DAX formula does:
 
 Ranks All CSOs
-First, I used the RANKX function to assign a rank to each CSO based on how much deposit they brought in:
+-First, I used the RANKX function to assign a rank to each CSO based on how much deposit they brought in:
 
-One rank is for top-down (highest to lowest)
+-One rank is for top-down (highest to lowest)
 
-Another is for bottom-up (lowest to highest)
+-Another is for bottom-up (lowest to highest)
 
 Takes User Input from a Slicer
 I created a slicer called "Choose Rank Type" with options like "Top" and "Bottom".
