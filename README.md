@@ -1,15 +1,15 @@
 <h1>BRANCH RETAIL DASHBOARD Dashboard</h1>
 
- ### [DASHBOARD LINK](https://app.powerbi.com/groups/me/reports/3be2a217-62eb-4ac7-80b9-9b44f5536b06/d6b7fa55e4c18dcfc3d5?experience=power-bi)
+ ### [DASHBOARD LINK](https://app.powerbi.com/groups/me/reports/ed74aad2-a5db-4a6f-af18-315c1246378f/70c55a5f1ecd488d3dec?experience=power-bi)
 
 <h2>Description</h2>
 This Power BI dashboard was created to track deposit mobilization performance at LAPO Microfinance Bank, Dawson Branch. The goal was to provide a clear picture of how much each Customer Service Officer (CSO) contributed to total deposits within a selected period.
-It breaks down deposits into CASA (Current & Savings Accounts) and Service Deposits, with filters to easily view the top or bottom performers. The dashboard gives managers insight into which CSOs are leading the charge and where support or improvement might be needed.
+
 
 <br />
 
 
-<h2>📂 Tools & TechnologiesUsed</h2>
+<h2>📂 Tools & Technologies Used</h2>
 
 - <b>SQL (Oracle): For data extraction/b> 
 - <b>Microsoft Excel: Light cleanup before import</b>
@@ -23,7 +23,14 @@ It breaks down deposits into CASA (Current & Savings Accounts) and Service Depos
 <h2>Steps Followed:</h2>
 
 <p align="center">
-Step 1:Data Extraction via SQL (Oracle Database)
+Step 1:Understanding the Business Need
+<p align="left"><br>The objective was to help regional and branch-level stakeholders visualize and track the total deposits mobilized across various channels, zones, and states, focusing on clean credit transactions within the core banking system. This would support better strategy planning and performance monitoring.
+
+</br>
+
+
+<p align="center">
+Step 2:Data Extraction via SQL (Oracle Database)
 <p align="left"><br>I wrote and executed a custom SQL script (see https://github.com/Nonxoh1/Branch-Retail-Dashboard/blob/main/DEPOSIT%20MOBILIZE.sql) to extract credit-only deposit transactions.</br>
 
 
@@ -41,21 +48,26 @@ Zone, State, and Area from the sttm_branch_custom table
 
 Branch codes and account details from sttm_cust_account
 </br>
-
-<br />
-<br />
 <p align="center">
-Step 2: Power BI load <br/>
-<img src="https://i.imgur.com/OsNL3Se.jpeg" height="80%" width="80%" alt="Power Query Steps Steps"/>
+Step 3: Data Cleaning & Aggregation
+<p align="left"><br>Used GROUP BY to summarize total LCY deposit amount per branch, zone, and state.
+
+Removed duplicates and validated transaction integrity using business logic.
+
+Exported the result as an EXCEL file from SQL Developer.</br>
+<p align="center">
+Step 4: Data Modeling in Power BI
+<p align="left"><br>Imported the cleaned EXCEL File into Power BI.
+Defined proper data types (e.g., branch as text, amount as decimal).
+
+Created relationships between dimension tables with other tables because i made use of two data. Example is New clients mobilized by each CSO in the bank.(see https://github.com/Nonxoh1/Branch-Retail-Dashboard/blob/main/DEPOSIT%20MOBILIZE.sql)</br>
+
+
+
  
- <p align="left">Data loaded directly from CSV extracts into Power BI Desktop.
-  
-  <br>Relationships automatically detected and adjusted as necessary.
-  Light transformation was done (most data was already clean).
 
-Verified column data types and filtered out non-essential transactions (REV%, SDC, VAT, etc.).
-
-Ensured no sensitive fields (e.g. mobile numbers) were retained in the report.
+<br />
+<br />
 
 </br>
 </br>
