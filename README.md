@@ -62,6 +62,16 @@ Defined proper data types (e.g., branch as text, amount as decimal).
 
 Created relationships between dimension tables with other tables because i made use of two data. Example is New clients mobilized by each CSO in the bank.(see https://github.com/Nonxoh1/Branch-Retail-Dashboard/blob/main/NEW%20CUSTOMERS%20CREATED_ONBOARDED.sql)</br>
 
+<p align="center">
+Step 4: Dashboard Development
+<p align="left"><br>Designed a clean and executive-friendly layout to highlight:
+Total Deposits Mobilized
+Top Performing Zones
+Performance by State and Area
+Branch Contribution Breakdown
+Used bar charts, cards, a ranking system of top and bottom performing CSO's and slicers for interactivity and insight filtering.
+
+
 
 
  
