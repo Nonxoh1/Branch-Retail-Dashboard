@@ -24,11 +24,23 @@ It breaks down deposits into CASA (Current & Savings Accounts) and Service Depos
 
 <p align="center">
 Step 1:Data Extraction via SQL (Oracle Database)
-I wrote and executed a custom SQL script (see https://github.com/Nonxoh1/Branch-Retail-Dashboard/blob/main/DEPOSIT%20MOBILIZE.sql) to extract credit-only deposit transactions.
+<p align="left"><br>I wrote and executed a custom SQL script (see https://github.com/Nonxoh1/Branch-Retail-Dashboard/blob/main/DEPOSIT%20MOBILIZE.sql) to extract credit-only deposit transactions.</br>
 
 
-<p align="left">SQL queries were used to extract transaction records from core banking systems.
-<br>Important fields included: USER_ID, ACCOUNT_NAME, TRN_DESC, AMOUNT, ZONE, BRANCH_NAME, CUSTOMER_NAME.</br>
+<p align="left">Key filters applied:
+
+Date range: 1st JAN 2024 – 31ST AUG 2024
+
+Transaction type: Only non-reversal CREDITS (drcr_ind = 'C')
+
+Excluded: VAT, SMC, SDC, internal user IDs, and specific product types like NOSTRO, MOBILE WALLETS, CALL, TERM DEPOSITS, etc.
+
+The script also joined relevant tables to get:
+
+Zone, State, and Area from the sttm_branch_custom table
+
+Branch codes and account details from sttm_cust_account
+</br>
 
 <br />
 <br />
